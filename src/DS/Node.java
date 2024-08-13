@@ -10,7 +10,6 @@ public class Node{
     }
 
     public Node(){
-        this.item = 0;
         this.next = null;
     }
 

@@ -51,14 +51,17 @@ public void delete(){
     }
 }
 public void printElements(){
-    for (int i = 0; i < this.elements.length; i++) {
+    for (int i = front; i !=rear ;i=(i+1)%MAX_SIZE) {
         System.out.println(this.elements[i]+" : "+i);
     }
+    System.out.println(this.elements[rear]+" : "+rear);
     System.out.println("======Resume========");
     System.out.println("The index of the Head is: "+this.front+" => "+this.elements[front]);
     System.out.println("The index of the Tail is: "+this.rear+" => "+this.elements[rear]);
     System.out.println("Le nomber des elements is: "+this.counter);
     }
+public T getHead(){return this.elements[front];}
 
+public T getTail(){return this.elements[rear];}
 }
 
